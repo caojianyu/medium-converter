@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3501067 */
-  src: url('iconfont.woff2?t=1657442307089') format('woff2'),
-       url('iconfont.woff?t=1657442307089') format('woff'),
-       url('iconfont.ttf?t=1657442307089') format('truetype');
+  src: url('iconfont.woff2?t=1660275477608') format('woff2'),
+       url('iconfont.woff?t=1660275477608') format('woff'),
+       url('iconfont.ttf?t=1660275477608') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close2:before {
+  content: "\e69a";
+}
+
+.icon-more:before {
+  content: "\e6a7";
+}
+
+.icon-subtract:before {
+  content: "\e6fe";
+}
+
+.icon-arrow-down:before {
+  content: "\e665";
+}
+
+.icon-arrow-right:before {
+  content: "\e666";
+}
+
+.icon-close1:before {
+  content: "\e668";
+}
+
+.icon-minus1:before {
+  content: "\e67a";
+}
+
+.icon-close:before {
+  content: "\ed4e";
+}
+
+.icon-minus:before {
+  content: "\ed50";
+}
+
+.icon-24gl-minimize2:before {
+  content: "\ea6b";
+}
+
+.icon-lcd-full:before {
+  content: "\e92b";
+}
+
+.icon-liaotian:before {
+  content: "\e61f";
 }
 
 .icon-guanbi:before {
@@ -28,3 +76,72 @@
 .icon-yinpin:before {
   content: "\e62c";
 }
+
+.icon-zanting1:before {
+  content: "\e621";
+}
+
+.icon-xiai:before {
+  content: "\e600";
+}
+
+.icon-shouyetianchong:before {
+  content: "\e692";
+}
+
+.icon-paixingbang:before {
+  content: "\e6c5";
+}
+
+.icon-boshiweb_bofangliang:before {
+  content: "\e62f";
+}
+
+.icon-24gf-headphones:before {
+  content: "\ea10";
+}
+
+.icon-pause:before {
+  content: "\e60f";
+}
+
+.icon-play:before {
+  content: "\e610";
+}
+
+.icon-repeat:before {
+  content: "\e611";
+}
+
+.icon-play-previous:before {
+  content: "\e612";
+}
+
+.icon-play-next:before {
+  content: "\e613";
+}
+
+.icon-07zanting:before {
+  content: "\e628";
+}
+
+.icon-suijibofang:before {
+  content: "\e622";
+}
+
+.icon-xunhuan:before {
+  content: "\e6a9";
+}
+
+.icon-shipinbofangshibofang:before {
+  content: "\e62b";
+}
+
+.icon-shangyishou:before {
+  content: "\e603";
+}
+
+.icon-xiayishou:before {
+  content: "\e602";
+}
+

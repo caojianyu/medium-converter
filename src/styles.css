@@ -1,0 +1,16 @@
+@import url("./assets/icon/iconfont.css");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: #00c1cd;
+  color: #fafafa;
+  border: none;
+  border-radius: 4px;
+  height: 28px;
+  padding: 0 15px;
+  outline: none;
+}

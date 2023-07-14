@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import "./assets/icon/iconfont.css";
+import { createApp } from "vue";
+import "./styles.css";
+import router from './router';
+import CUI from './components/cui'
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+createApp(App).use(router).use(CUI).mount("#app");

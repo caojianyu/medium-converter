@@ -1,27 +1,108 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../dist"
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
   },
   "package": {
-    "productName": "app",
-    "version": "0.1.0"
+    "productName": "音视频转换器",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": false,
+      "shell": {
+        "all": true,
+        "scope": [
+          {
+            "name": "ffprobe",
+            "cmd": "decoder/ffprobe",
+            "args": true
+          },
+          {
+            "name": "ffmpeg",
+            "cmd": "decoder/ffmpeg",
+            "args": true
+          },
+          {
+            "name": "cmd",
+            "cmd": "cmd",
+            "args": true
+          }
+        ]
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": false,
+        "copyFile": false,
+        "createDir": true,
+        "exists": true,
+        "readDir": false,
+        "readFile": true,
+        "removeDir": false,
+        "removeFile": false,
+        "renameFile": false,
+        "scope": [
+          "$DESKTOP/**"
+        ],
+        "writeFile": true
+      },
+      "window": {
+        "all": false,
+        "center": false,
+        "close": true,
+        "create": false,
+        "hide": false,
+        "maximize": false,
+        "minimize": true,
+        "print": false,
+        "requestUserAttention": false,
+        "setAlwaysOnTop": false,
+        "setClosable": false,
+        "setContentProtected": false,
+        "setCursorGrab": false,
+        "setCursorIcon": false,
+        "setCursorPosition": false,
+        "setCursorVisible": false,
+        "setDecorations": false,
+        "setFocus": false,
+        "setFullscreen": false,
+        "setIcon": false,
+        "setIgnoreCursorEvents": false,
+        "setMaxSize": false,
+        "setMaximizable": false,
+        "setMinSize": false,
+        "setMinimizable": false,
+        "setPosition": false,
+        "setResizable": false,
+        "setSize": false,
+        "setSkipTaskbar": false,
+        "setTitle": false,
+        "show": false,
+        "startDragging": true,
+        "unmaximize": false,
+        "unminimize": false
+      },
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": false,
+        "open": true,
+        "save": false
+      },
+      "protocol": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
+      "targets": "all",
+      "identifier": "com.tauri.build",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -29,52 +110,47 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.build",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": ["./ffmpeg/windows-x86_64/*", "./start.vbs", "./exit.vbs"],
-      "shortDescription": "",
-      "targets": "all",
+      "resources": [
+        "./decoder"
+      ],
       "windows": {
+        "allowDowngrades": true,
         "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": "",
+        "digestAlgorithm": null,
+        "nsis": null,
+        "timestampUrl": null,
+        "tsp": false,
+        "webviewFixedRuntimePath": null,
+        "webviewInstallMode": {
+          "silent": true,
+          "type": "downloadBootstrapper"
+        },
         "wix": {
-          "language": "zh-CN"
+          "language": ["zh-CN"]
         }
-      }
+      },
+      "publisher": "994Ay"
     },
     "security": {
-      "csp": "default-src 'self'; media-src stream: https://stream.localhost"
-    },
-    "updater": {
-      "active": false
+      "csp": null
     },
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
-        "resizable": true,
-        "title": "视频转码工具",
-        "width": 800,
-        "minWidth": 800,
-        "minHeight": 600,
+        "height": 720,
+        "resizable": false,
+        "title": "音视频转换器",
+        "width": 1200,
         "visible": false,
-        "center": true,
-        "decorations": false
+        "decorations": false,
+        "transparent": true
       },
       {
-        "width": 400,
-        "height": 200,
+        "width": 500,
+        "height": 300,
         "decorations": false,
         "resizable": false,
-        "url": "splashscreen.html",
+        "url": "/splashscreen",
         "label": "splashscreen",
         "center": true
       }

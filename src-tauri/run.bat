@@ -1,1 +1,0 @@
-"D:\rust\tauri\app\src-tauri\ffmpeg\windows-x86_64\app_ffmpeg.exe"  -i  "D:\rust\tauri\video\7月10日.mp4"  -progress  progress.txt  "D:\rust\tauri\video\7月10日.wmv" 
