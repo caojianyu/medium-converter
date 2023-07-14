@@ -1,10 +1,10 @@
-## Setp 1
+## Step 1
 
 npm install
 
-## Setp 2
+## Step 2
 
 npm run tauri dev
 
-## Setp 3
+## Step 3
 npm run tauri build
